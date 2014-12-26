@@ -33,7 +33,7 @@ generate_file(Lang,Items, Fuzzy) ->
 %%
 write_entries(Items)->
 	Fd = get(fd),
-    F = fun({Id,Translation,Finfo}) ->
+    F = fun({Id,Translation,_Finfo}) ->
 		% Fi = gettext_compile:fmt_fileinfo(Finfo),
 		% io:format(Fd, "~n#: ~s~n", [Fi]),
 		file:write(Fd, "msgid \"\"\n"),
